@@ -1,5 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 09.10.2026
+## Date: 10.10.2026
 ## AIM
 To develop a Django Application to store and retrieve data from a Vehicle Service Database platform using Object Relational Mapping(ORM).
 
@@ -38,14 +38,16 @@ models.py
 from django.db import models
 from django.contrib import admin 
 class blinkit(models.Model):
+    SNumber=models.IntegerField()
     Name=models.CharField(max_length=10)
     Address=models.TextField()
     Productname=models.CharField(max_length=10)
-    Quantity=models.IntegerField
-    price=models.IntegerField
+    Quantity=models.IntegerField()
+    price=models.IntegerField()
+    Type=models.CharField()
     Mobile_Number=models.IntegerField(primary_key=True)
 class blinkitadmin(admin.ModelAdmin):
-    list_display=["Name","Address","Productname","Quantity","price","Mobile_Number"]
+    list_display=["SNumber","Name","Address","Productname","Quantity","price","Type","Mobile_Number"]
 
 admin.py
 from django.contrib import admin
@@ -56,7 +58,7 @@ admin.site.register(blinkit,blinkitadmin)
 
 
 ## OUTPUT
-![alt text](image.png)
+
 
 
 ## RESULT
