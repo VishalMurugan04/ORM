@@ -31,7 +31,7 @@ Apply the migration files of the created app to the database
 Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
-```
+```python
 models.py
 
 from django.db import models
@@ -54,7 +54,6 @@ admin.py
 from django.contrib import admin
 from .models import Tomato,TomatoAdmin
 admin.site.register(Tomato,TomatoAdmin)
-
 ```
 
 
