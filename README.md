@@ -33,6 +33,7 @@ Execute Django admin using localhost and create details for 10 entries
 ## PROGRAM
 '''
 models.py
+
 from django.db import models
 from django.contrib import admin
 class Tomato(models.Model):
@@ -47,7 +48,9 @@ class Tomato(models.Model):
 class TomatoAdmin(admin.ModelAdmin):
     list_display=["SNumber","Name","Phone_Number","Address","Product","Quantity","Brand","Price"]
 
+
 admin.py
+
 from django.contrib import admin
 from .models import Tomato,TomatoAdmin
 admin.site.register(Tomato,TomatoAdmin)
@@ -56,7 +59,7 @@ admin.site.register(Tomato,TomatoAdmin)
 
 
 ## OUTPUT
-
+![alt text](image.png)
 
 
 ## RESULT
